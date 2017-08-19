@@ -11,7 +11,6 @@ object Consumer extends App {
   val channel = connection.createChannel()
 
   val queueName = "hello"
-  val message = "Hello World"
   channel.queueDeclare(queueName, false, false, false, null)
 
   val printingConsumer = new DefaultConsumer(channel) {
